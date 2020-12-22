@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 
 app.get('/', function(req, res) {
-  res.send('Hello World!');
+  const data = {
+    id: 1,
+    name: 'Imam'
+  };
+
+  res.json(data);
 });
 
 app.get('/about', function(req, res) {
