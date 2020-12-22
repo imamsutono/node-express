@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-  res.send('About');
+  res.redirect('/users');
 });
 
 // Users route
