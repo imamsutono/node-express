@@ -15,12 +15,13 @@ app.get('/about', function(req, res) {
 });
 
 // Users route
-app.get('/users', function(req, res) {
-  res.send('Get users');
-});
-app.post('/users', function(req, res) {
-  res.send('Post users')
-});
+app.route('/users')
+  .get('/users', function(req, res) {
+    res.send('Get users');
+  })
+  .post('/users', function(req, res) {
+    res.send('Post users')
+  });
 app.put('/users/:id', function(req, res) {
   const id = req.params;
   res.send(id);
