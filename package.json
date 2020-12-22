@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "nodejs-express",
   "version": "1.0.0",
   "description": "Starter NodeJS project with Express framework",
   "main": "index.js",
