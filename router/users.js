@@ -14,6 +14,7 @@ router.route('/users')
     users.push(req.body);
     res.send(users);
   });
+
 router.put('/users/:id', function(req, res) {
   const {id, name, email} = req.params;
 
@@ -29,9 +30,11 @@ router.put('/users/:id', function(req, res) {
 
   res.json(users);
 });
+
 router.delete('/users/:userId', function(req, res) {
   const id = req.params.userId;
-  res.send(id);
+  users = users.filter(user => user.id !== id);
+  res.send(users);
 });
 
 module.exports = router;
